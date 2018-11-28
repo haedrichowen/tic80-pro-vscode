@@ -1,69 +1,59 @@
 {
-    "name": "tic80-vscode",
-    "displayName": "tic80-vscode",
-    "description": "Edit and run tic80 from vscode",
-    "version": "1.6.0",
-    "publisher": "Gi972",
-    "icon": "images/logo.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Gi972/tic80-vscode.git"
-    },
-    "engines": {
-        "vscode": "^1.10.0"
-    },
-    "categories": [
-        "Other"
+  "name": "tic80-pro-vscode",
+  "displayName": "tic80-pro-vscode",
+  "description": "Run carts in TIC-80 Pro from vscode",
+  "version": "0.1.0",
+  "publisher": "Justin Wash",
+  "icon": "images/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trifectuh/tic80-pro-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.10.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.runTic80Pro"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.runTic80Pro",
+        "title": "Run cart in TIC-80 Pro"
+      }
     ],
-    "activationEvents": [
-        "onCommand:extension.runTic"
+    "keybindings": [
+      {
+        "command": "extension.runTic80Pro",
+        "key": "cmd+r"
+      }
     ],
-    "main": "./extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "extension.runTic",
-                "title": "Run Tic80"
-            }
-        ],
-        "keybindings": [
-            {
-                "command": "extension.runTic",
-                "key": "cmd+r"
-            }
-        ],
-        "configuration": {
-            "type": "object",
-            "title": "Tic80 Setup",
-            "properties": {
-                "Tic80.executablePath": {
-                    "type": "string",
-                    "default": "/Applications/tic.app/Contents/MacOS/tic",
-                    "description": "Path to the Tic80 console (by default /Applications/tic.app/Contents/MacOS/tic on MacOS)  (for windows the syntax is C:\\Program Files (x86)\\Tic80\\tic.exe)"
-                },
-                "Tic80.executablePathCard": {
-                    "type": "string",
-                    "default": "/Users/NaMeOfYourUserSpace/Library/Application Support/TIC-80/0.27.1 dev/",
-                    "description": "Path to the card folder (by default /Users/NaMeOfYourUserSpace/Library/Application Support/TIC-80/0.27.1 dev/ on MacOS) (by default on windows is C:\\Users\\NaMeOfYourUserSpace\\AppData\\Roaming\\TIC-80\\0.27.1 dev\\)"
-                },
-                "Tic80.showNameInformation": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "show information message, desactive it when you develop is better :-)"
-                }
-            }
+    "configuration": {
+      "type": "object",
+      "title": "Tic80Pro",
+      "properties": {
+        "Tic80Pro.executablePath": {
+          "type": "string",
+          "default": "/Applications/tic.app/Contents/MacOS/tic80",
+          "description": "Path to the Tic80 console (by default /Applications/tic80.app/Contents/MacOS/tic80 on MacOS)  (for windows the syntax is C:\\Program Files (x86)\\Tic80\\tic80.exe)"
         }
-    },
-    "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "eslint": "^3.6.0",
-        "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+      }
     }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "eslint": "^3.6.0",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  }
 }
