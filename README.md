@@ -2,8 +2,6 @@
 
 This is a fork of tic80-vscode meant for the Pro version of TIC-80
 
-![vscodetic80](images/vscodetic80170.gif)
-
 ## Install
 
 Install tic80-pro-vscode
