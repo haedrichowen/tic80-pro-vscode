@@ -27,7 +27,6 @@ function activate(context) {
       if (Tic80ProTerminal) Tic80ProTerminal.dispose();
 
       Tic80ProTerminal = vscode.window.createTerminal("tic80pro", path, args);
-      Tic80ProTerminal.show();
     }
   );
 
