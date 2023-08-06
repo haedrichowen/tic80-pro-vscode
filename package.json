@@ -40,10 +40,15 @@
           "type": "string",
           "default": "/Applications/tic.app/Contents/MacOS/tic80",
           "description": "Path to the Tic80 console (by default /Applications/tic80.app/Contents/MacOS/tic80 on MacOS)  (for windows the syntax is C:\\Program Files (x86)\\Tic80\\tic80.exe)"
+          },
+          "Tic80Pro.rootPath": {
+            "type": "string",
+            "default": " ",
+            "description": "Path to root of project .tic"
+          }
         }
       }
-    }
-  },
+    },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"

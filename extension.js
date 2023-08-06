@@ -19,7 +19,7 @@ function activate(context) {
 
       textEditor.document.save();
 
-      const cart = tic80ProSetup["mainFilePath"];
+      const cart = tic80ProSetup["rootPath"];
 
       const path = tic80ProSetup["executablePath"];
       const args = [cart];
