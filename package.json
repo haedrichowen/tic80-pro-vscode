@@ -1,14 +1,10 @@
 {
-  "name": "tic80-pro-vscode",
-  "displayName": "tic80-pro-vscode",
+  "name": "tic80-pro-vscode-custom",
+  "displayName": "tic80-pro-vscode-custom",
   "description": "Run carts in TIC-80 Pro from vscode",
   "version": "0.1.0",
   "publisher": "Justin Wash",
-  "icon": "images/logo.png",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/trifectuh/tic80-pro-vscode.git"
-  },
+
   "engines": {
     "vscode": "^1.10.0"
   },
